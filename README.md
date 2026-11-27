@@ -14,9 +14,14 @@ Sovellus pystyy:
 - puhumaan vastauksen paikallisella Piper TTS -järjestelmällä.
 - erillinen puheentunnistuksen luotettavuuden tarkistuskerros
 
+Viimeisimmässä raportoidussa `npm test` -ajossa
+- 14 testiä läpäisi.
+- 0 testiä epäonnistui.
+
+
 ## Toteutettu
 
-- [x] Projektin perusrakenne
+- [x] Projektin perus rakenne
 - [x] Push-to-talk-painikkeen käsittely
 - [x] Mikrofonin tallennus WAV-muotoon
 - [x] Äänitallentimen automaattiset testit
@@ -37,33 +42,22 @@ Sovellus pystyy:
 - [x] Suomenkielisen Harri-puheäänen testaus
 - [x] Harri- ja Asmo-äänien valintatoiminnon alustava toteutus
 - [x] Suomenkielisen puheentunnistuksen Base- ja Small-mallien vertailu
-- [x] Whisper Small -mallin valinta jatkotestaukseen
+- [x] Whisper Small -mallin valinta jatkotestaukseen, poistetaan Base
 - [x] Ensimmäinen turvallisuuden sisältösuodatin
 - [x] Erillinen RecognitionSafetyGate-puheentunnistuksen tarkistuskerros
 - [x] RecognitionSafetyGaten integrointi ConversationEngineen
 - [x] Epävarman tai puutteellisen tunnistustiedon käsittely estävällä oletuksella
-- [x] Onnistuneen normaalin puheentunnistuksen ja Gemma-vastauksen testaus integroidussa sovelluksessa
+- [x] Onnistuneen normaalin puheentunnistuksen
+- [x] LLM-kielimalli vastauksen testaus integroidussa sovelluksessa
 
 ## Kesken
 
 - [ ] RecognitionSafetyGaten ja ConversationEnginen yhdistetyt automaattiset integraatiotestit
-- [ ] Turvallisuuden sisältösuodattimen kattava testaus
-- [ ] Puheentunnistuksen virheiden ja väärin tunnistettujen vaarallisten sanojen käsittely
-
-
-Viimeisimmässä raportoidussa `npm test` -ajossa:
-- 14 testiä läpäisi.
-- 0 testiä epäonnistui.
-
-Testit kattoivat muun muassa mikrofonitallennuksen, puheentunnistuksen rajapinnan, Gemma-vastauksen, painikkeen, Piperin sekä RecognitionSafetyGaten perustapaukset.
-
-Tämän jälkeen RecognitionSafetyGate kytkettiin ConversationEngineen. Integroitu sovellus käynnistettiin onnistuneesti, ja normaalista puheesta muodostui Gemman vastaus, jonka Piper puhui.
-
 
 ## Fyysinen laitetesti halutessaan
 
-- [ ] Raspberry Pi -prototyyppi
-- [ ] Offline-toiminnan testaaminen lopullisella laitteistolla
+- [ ] Raspberry Pi tai vastaava -prototyyppi rakenna
+- [ ] Tämän softan testaaminen lopullisella laitteistolla
 
 ## Puheentunnistus
 
