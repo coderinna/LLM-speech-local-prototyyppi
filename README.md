@@ -126,10 +126,10 @@ Kehityksen aikana testattiin kahta paikallisesti suoritettavaa kielimallia:
 
 | Malli | Testitulos | Valinta |
 |---|---|---|
-| Qwen3 0.6B | Suomenkielisen keskustelun laatu ei ollut riittävä | Ei valittu |
-| Gemma 3 4B | Suomenkielinen keskustelu toimi paremmin, mutta laatu on edelleen välttävä | Nykyinen testimalli |
+| Qwen3 0.6B | Keskustelun laatu ei ollut riittävä | Ei valittu |
+| Gemma 3 4B | Keskustelu toimi paremmin, mutta laatu on edelleen välttävä. Hourailua oli paljon. | Nykyinen testimalli |
 
-Gemma 3 4B valittiin jatkokehitykseen paremman suomenkielisen keskustelulaadun perusteella.
+Gemma 3 4B valittiin jatkokehitykseen paremman keskustelulaadun perusteella.
 
 Projekti on kuitenkin edelleen tekninen demo, eikä Gemma 3 4B ole lopullinen pakollinen mallivalinta. Testien aikana on saatu käytännön kokemusta sekä heikomman että paremman keskustelulaadun tarjoavista malleista.
 
@@ -141,10 +141,7 @@ Nykyinen testattava kielimalli on Gemma 3 4B.
 - Ollama-mallitunniste: `gemma3:4b`.
 - Latauskoko noin 3,4 GB.
 - Integroitu Node.js-sovellukseen.
-- Suomenkielistä keskustelua on testattu käytännössä.
-
-Mallin lataaminen vaatii verkkoyhteyden.
-Ladattua mallia voidaan käyttää paikallisesti ilman pilvipalvelua.
+- Suomenkielistä keskustelua on testattu käytännössä
 
 
 ## Suomenkielinen puhesynteesi
@@ -164,7 +161,7 @@ LLM-speech-local-DEMO_VOICE=asmo npm start
 
 Harrin suomenkielinen puheääni on testattu käytännössä. Asmon mallin saatavuus ja toiminta pitää vielä varmistaa lopullisessa käyttöympäristössä.
 
-**Huomio:** Asmon mallin lisenssi on CC BY-NC 4.0, joka rajoittaa kaupallista käyttöä.
+**Huomio:** Asmon mallin lisenssi on CC BY-NC 4.0, joka rajoittaa käyttöä.
 
 Itse en tykännyt kummankaan äänen sävystä tarpeeksi, pitää etsiä parempi, mutta tuottaa ymmärettävää suomenkielen puhetta.
 
@@ -193,12 +190,13 @@ Tarkistaa tunnistetun tekstin sisältöä ennen kielimallille lähettämistä. P
 
 Sääntöpohjainen tunnistus on ensimmäinen toteutusvaihe. Se ei vielä tunnista kaikkia ilmaisuja, asiayhteyksiä tai puheentunnistuksen virheitä. Myös kielimalleilla itsellään on turvallisuus ratkaisuja sisäisiä.
 
-## Tietosuoja
+## Localhost only
 
-Tavoitteet:
-- Ei pilvipalveluita keskustelun käsittelyyn.
-- Äänitallenteita ei tallenneta pysyvästi.
-- Keskusteluja ei tallenneta pysyvästi.
-- Väliaikaiset äänitiedostot poistetaan käsittelyn jälkeen.
-- Kielimalli toimii paikallisesti Ollaman kautta.
-- Ladatut mallit ja paikalliset riippuvuudet säilytetään kehitysympäristössä.
+Sovellus voi toimia paikallisesta ilman ytheyttä internettiin oli tavoite
+
+- Ei pilvipalveluita keskustelun käsittelyyn
+- Äänitallenteita ei tallenneta pysyvästi
+- Keskusteluja ei tallenneta pysyvästi
+- Väliaikaiset äänitiedostot poistetaan käsittelyn jälkeen
+- Kielimalli toimii paikallisesti Ollaman kautta
+- Ladatut mallit ja paikalliset riippuvuudet säilytetään kehitysympäristössä
