@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.wav
+*.mp3
+*.ogg
+models/
+tmp/
+coverage/
+.DS_Store
+whisper.cpp/
+
+.venv-tts/
