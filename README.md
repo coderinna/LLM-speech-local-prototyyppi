@@ -14,10 +14,6 @@ Sovellus pystyy:
 - puhumaan vastauksen paikallisella Piper TTS -järjestelmällä.
 - erillinen puheentunnistuksen luotettavuuden tarkistuskerros
 
-Viimeisimmässä raportoidussa `npm test` -ajossa
-- 14 testiä läpäisi.
-- 0 testiä epäonnistui.
-
 ## Toteutettu
 
 ### Perus aloitus setup
@@ -204,3 +200,51 @@ Sovellus voi toimia paikallisesta ilman ytheyttä internettiin oli tavoite
 - Väliaikaiset äänitiedostot poistetaan käsittelyn jälkeen
 - Kielimalli toimii paikallisesti Ollaman kautta
 - Ladatut mallit ja paikalliset riippuvuudet säilytetään kehitysympäristössä
+
+
+
+## Automaattiset testit
+
+Suorita ohjelmiston automaattiset testit:
+
+```bash
+npm test
+```
+
+Testit tarkistavat sovelluksen keskeiset toiminnot ja integraatiot.
+
+## Oikea käyttö
+Asenna riippuvuudet:
+
+```bash
+npm install
+```
+Käynnistä sovellus:
+
+```bash
+npm start
+```
+
+Testaa sen jälkeen koko puheesta puheeksi -ketju oikealla mikrofonilla, push-to-talk-painikkeella ja kaiuttimella.
+
+### Normaali puhe
+
+1. Paina ja pidä Caps Lock -näppäintä pohjassa.
+(Push-to-talk on toteutettu Caps Lock -näppäimellä. Fyysistä painiketta ei ole vielä testattu.)
+2. Sano esimerkiksi: `Hei, mitä kuuluu?`
+3. Vapauta painike. (Caps Lock)
+4. Tarkista, että puhe tunnistetaan.
+5. Tarkista, että Gemma muodostaa vastauksen.
+6. Tarkista, että vastaus kuuluu kaiuttimesta.
+
+Sano tarkoituksella epäselvästi tai liian hiljaa.
+Tarkista, että epävarma tunnistus estetään eikä sitä lähetetä kielimallille.
+
+Testaa turvallisuussuodattimen toimintaa tarkoitukseen sopivalla testilauseella.
+Tarkista, että estettävä sisältö pysäytetään ennen kielimallille lähettämistä.
+
+Käy vähintään kaksi peräkkäistä keskusteluvuoroa ilman sovelluksen uudelleenkäynnistämistä.
+Tarkista, että molemmat puheenvuorot käsitellään normaalisti.
+
+Pidä painiketta pohjassa puhumisen ajan ja vapauta se puheen jälkeen.
+Tarkista, että yksi painallus käynnistää yhden tallennuksen eikä pitkä painallus aiheuta useita tallennuksia.
