@@ -18,41 +18,51 @@ Viimeisimmässä raportoidussa `npm test` -ajossa
 - 14 testiä läpäisi.
 - 0 testiä epäonnistui.
 
-
 ## Toteutettu
 
-- [x] Projektin perus rakenne
-- [x] Push-to-talk-painikkeen käsittely
-- [x] Mikrofonin tallennus WAV-muotoon
-- [x] Äänitallentimen automaattiset testit
-- [x] Whisper.cpp käännetty paikallisesti
-- [x] Whisper-mallin lataus
-- [x] Mikrofonin ja Whisper.cpp:n välinen integraatio
-- [x] Puheentunnistuksen tuloksen välittäminen keskustelumoduulille
-- [x] Whisperin JSON-palautemuodon käyttöönotto
-- [x] Puheentunnistuksen token-kohtaisten arvojen lukeminen
-- [x] Ollama asennettu kehitysympäristöön
-- [x] Gemma 3 4B ladattu ja testattu
-- [x] Paikallisen kielimallin integrointi Node.js-sovellukseen
-- [x] Mikrofonista tunnistetun puheen välittäminen kielimallille
-- [x] Kielimallin vastauksen palauttaminen sovellukselle
-- [x] Sovelluksen puheesta puheeksi -perustoimintaketju testattu
-- [x] Kaiuttimen integrointi
-- [x] Piper TTS:n integrointi Node.js-sovellukseen
-- [x] Suomenkielisen Harri-puheäänen testaus
-- [x] Harri- ja Asmo-äänien valintatoiminnon alustava toteutus
-- [x] Suomenkielisen puheentunnistuksen Base- ja Small-mallien vertailu
-- [x] Whisper Small -mallin valinta jatkotestaukseen, poistetaan Base
-- [x] Ensimmäinen turvallisuuden sisältösuodatin
-- [x] Erillinen RecognitionSafetyGate-puheentunnistuksen tarkistuskerros
-- [x] RecognitionSafetyGaten integrointi ConversationEngineen
-- [x] Epävarman tai puutteellisen tunnistustiedon käsittely estävällä oletuksella
-- [x] Onnistuneen normaalin puheentunnistuksen
-- [x] LLM-kielimalli vastauksen testaus integroidussa sovelluksessa
+### Perus aloitus setup
+- Projektin perus rakenne
+- Push-to-talk-painikkeen käsittely
+- Mikrofonin tallennus WAV-muotoon
+- Äänitallentimen automaattiset testit
 
-## Kesken
+### Puheentunnistus
+- Whisper.cpp käännetty paikallisesti
+- Whisper-mallin lataus
+- Mikrofonin ja Whisper.cpp:n välinen integraatio
+- Puheentunnistuksen tuloksen välittäminen keskustelumoduulille
+- Whisperin JSON-palautemuodon käyttöönotto
+- Puheentunnistuksen token-kohtaisten arvojen lukeminen
 
-- [ ] RecognitionSafetyGaten ja ConversationEnginen yhdistetyt automaattiset integraatiotestit
+### Kielimalli LLM
+- Ollama asennettu kehitysympäristöön
+- Gemma 3 4B ladattu ja testattu
+- Paikallisen kielimallin integrointi Node.js-sovellukseen
+- Mikrofonista tunnistetun puheen välittäminen kielimallille
+- Kielimallin vastauksen palauttaminen sovellukselle
+
+### Puheesta puheeksi
+- Sovelluksen puheesta puheeksi -perustoimintaketju testattu
+- Kaiuttimen integrointi
+- Piper TTS:n integrointi Node.js-sovellukseen
+- Suomenkielisen Harri-puheäänen testaus
+- Harri- ja Asmo-äänien valintatoiminnon alustava toteutus
+
+### Puheentunnistus
+- Suomenkielisen puheentunnistuksen Base- ja Small-mallien vertailu
+- Whisper Small -mallin valinta jatkotestaukseen, poistetaan Base
+
+### Turvallisuus
+- Ensimmäinen turvallisuuden sisältösuodatin
+- Erillinen RecognitionSafetyGate-puheentunnistuksen tarkistuskerros
+- RecognitionSafetyGaten integrointi ConversationEngineen
+- Epävarman tai puutteellisen tunnistustiedon käsittely estävällä oletuksella
+
+### Integroitu sovellustestaus
+- Onnistuneen normaalin puheentunnistuksen testaus
+- LLM-kielimallin vastauksen testaus integroidussa sovelluksessa
+- RecognitionSafetyGaten ja ConversationEnginen yhdistetyt automaattiset integraatiotestit
+- Koko testisarja 18/18 läpi
 
 ## Fyysinen laitetesti halutessaan
 
