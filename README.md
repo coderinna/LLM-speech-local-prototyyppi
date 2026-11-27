@@ -2,7 +2,7 @@
 
 Offline-toimiva keskustelukumppanidemo, jossa käyttäjän puhe tunnistetaan paikallisesti suomenkielisellä puheentunnistusmallilla. Tunnistettu teksti välitetään paikalliselle kielimallille (LLM), joka muodostaa vastauksen. Vastaus muunnetaan puheeksi paikallisella puhesynteesillä.
 
-## Nykyinen kehitysvaihe
+## Nykyinen projektin tila
 
 LLM-speech-local-DEMOn ensimmäinen paikallisesti toimiva puheesta puheeksi -prototyyppi on toteutettu Linux-kehitysympäristössä.
 
@@ -14,7 +14,7 @@ Sovellus pystyy:
 - puhumaan vastauksen paikallisella Piper TTS -järjestelmällä.
 - erillinen puheentunnistuksen luotettavuuden tarkistuskerros
 
-## Toteutettu
+## Toteutetut ominaisuudet prototyyppiin
 
 ### Perus aloitus setup
 - Projektin perus rakenne
